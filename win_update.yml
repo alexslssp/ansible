@@ -1,0 +1,18 @@
+---
+- name: Install all security, critical, and rollup updates
+  gather_facts: false
+  hosts: janelas
+  tasks:
+   - name: Install 
+     win_updates:
+       category_names:
+       - SecurityUpdates
+       - CriticalUpdates
+       - UpdateRollups
+       - DefinitionUpdates
+       - Updates
+       whitelist:
+       - KB4049017
+       - KB4033369
+       - KB3172614
+       reboot: yes
