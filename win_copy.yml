@@ -1,0 +1,6 @@
+--- 
+- 
+  hosts: iclinic
+  name: "limpa iDocuments"
+  tasks: 
+    win_shell: "c:\\limpa.bat"
